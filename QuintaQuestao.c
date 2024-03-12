@@ -15,7 +15,7 @@ append_string(string_t *string, char value)
 {
     if (!string->capacity)
     {
-        string->characters = calloc(sizeof(string_t), DEFAULT_CAPACITY);
+        string->characters = calloc(sizeof(char), DEFAULT_CAPACITY);
         if (string->characters == NULL) exit(1);
         string->length = 0;
         string->capacity = DEFAULT_CAPACITY;
