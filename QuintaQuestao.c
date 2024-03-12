@@ -24,7 +24,7 @@ append_string(string_t *string, char value)
     if (string->length + 1 == string->capacity)
     {
         int new_capacity = string->capacity + DEFAULT_CAPACITY;
-        string->characters = realloc(string->characters, new_capacity);
+        string->characters = realloc(string->characters, new_capacity * sizeof(char));
         if (string->characters == NULL) exit(1);
         string->capacity = new_capacity;
     }
